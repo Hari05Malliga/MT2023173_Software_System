@@ -3,12 +3,19 @@
 #include<fcntl.h>
 
 int main() {
-	int i,fd;
+	int link,fd;
 
 	fd = open("temp1", O_CREAT | O_RDWR, 0744);
+       	if ( fd == -1 ) {
+		printf ("File not Created...\n");
+		return 1;
+	}
 
-       	if ( fd == -1 ) printf("File not Created");
+        link = symlink("temp1","temp2");
+        if ( link == -1 ) {
+	       	printf ("Softlink Creation failed...\n");
+		return 1;
+	}
 
-        i = symlink("temp1","temp2");
 	return 0;
 }
