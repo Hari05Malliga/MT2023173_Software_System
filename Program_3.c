@@ -5,7 +5,7 @@
 #include <unistd.h>
 
 int main() {
-	int fd = creat ( "new_file", 0744);
+	int fd = creat ( "new_file", 0544);
 	if ( fd == -1 ) {
 		perror ("File Creation failed...");
 		return fd;
