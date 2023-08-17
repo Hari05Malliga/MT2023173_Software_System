@@ -12,11 +12,4 @@ int main() {
 	int fd5 = open ( "file5", O_CREAT, 0744);
 
 	while(1);
-
-	close(fd1);
-	close(fd2);
-	close(fd3);
-	close(fd4);
-	close(fd5);
-	return 0;
 }
