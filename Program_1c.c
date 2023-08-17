@@ -11,7 +11,7 @@
 int main() {
 	int pipe, pid;
 
-	if ( access("namedFifo", F_OK) ) mkfifo ("nameFifo", 0744);
+	if ( access("nameFifo", F_OK) ) mkfifo ("nameFifo", 0744);
 
 	pipe = open ( "nameFifo", O_RDWR);
 
