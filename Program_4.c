@@ -5,7 +5,7 @@
 #include <unistd.h>
 
 int main() {
-	int fd = open ( "new_file", O_RDWR, 0744);
+	int fd = open ( "new_file", O_RDWR);
 	if ( fd == -1 ) {
 		perror ( "File opening failed");
 		return fd;
