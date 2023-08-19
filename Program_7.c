@@ -7,14 +7,15 @@
 int main(int argc, char* argv[]) {
         if(argc!=3)
         {
-                printf("You are useless\n");
+                printf("Please execute in correct format.\n");
                 return -1;
         }
+
         int fd_read = open(argv[1], O_RDONLY);
         int fd_write = open(argv[2], O_WRONLY|O_CREAT);
 
         if(fd_read==-1 || fd_write==-1)
-                printf("Your system is useless\n");
+                printf("File Opening error.\n");
 
         // Logic
         while(1){
@@ -30,8 +31,7 @@ int main(int argc, char* argv[]) {
         int close_fd_write = close(fd_write);
 
         if(close_fd_read==-1 || close_fd_write==-1)
-                printf("Your system is useless, coz it can't even close a file\n");
+                printf("File Closing error.\n");
 
         return 0;
-
 }
