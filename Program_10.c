@@ -33,5 +33,11 @@ int main(int argc, char* argv[]) {
 		return -1;
 	}
 
+	int fd_close = close (fd);
+	if ( -1 == fd ) {
+		perror ("File closing error");
+		return fd_close;
+	}
+
 	return 0;
 }
