@@ -1,3 +1,12 @@
+/*
+============================================================================
+Name : Program 1a
+Author : Hari Prasad C
+Description : Write a program, Create a soft link using system call symlink.
+Date: 17th Aug, 2023.
+============================================================================
+*/
+
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>

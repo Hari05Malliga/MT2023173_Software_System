@@ -1,3 +1,13 @@
+/*
+============================================================================
+Name : Program 8
+Author : Hari Prasad C
+Description : Write a program to open a file in read only mode, read line by line and display each line as it is read.
+	      Close the file when end of file is reached.
+Date: 18th Aug, 2023.
+============================================================================
+*/
+
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
@@ -29,7 +39,7 @@ int main(int argc, char* argv[]) {
 			if ( var != '\n' && i < MAX) buffer[i++] = var;
 			else {
 				buffer[i] = '\n';
-				write ( 1, buffer, sizeof(buffer) );
+				write ( fileno(stdout), buffer, i+1 );
 				i = 0;
 				memset ( buffer, '\0', sizeof(buffer) );
 			}

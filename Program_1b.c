@@ -1,3 +1,12 @@
+/*
+============================================================================
+Name : Program 1b
+Author : Hari Prasad C
+Description : Write a program, Create a hard link using system call link.
+Date: 17th Aug, 2023.
+============================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include<fcntl.h>

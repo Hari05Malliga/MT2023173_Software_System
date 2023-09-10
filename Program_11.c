@@ -1,3 +1,16 @@
+/*
+============================================================================
+Name : Program 11
+Author : Hari Prasad C
+Description : Write a program to open a file, duplicate the file descriptor and append the file with both the descriptors,
+	      check whether the file is updated properly or not.
+		a. use dup
+		b. use dup2
+		c. use fcntl
+Date: 19th Aug, 2023.
+============================================================================
+*/
+
 #include <stdio.h>
 #include <sys/stat.h>
 #include <sys/types.h>
@@ -53,7 +66,7 @@ int main(int argc, char* argv[]) {
 
 	// Appending File with Duplicate descriptor created using dup2
 
-	int fd_dup2 = dup2 (fd, 10);
+	int fd_dup2 = dup2 (fd, 14);
 	if ( -1 == fd_dup2 ) {
 		perror ("Unable to dup file descriptor using dup2 system call");
 		return -1;

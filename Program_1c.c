@@ -1,3 +1,12 @@
+/*
+============================================================================
+Name : Program 1c
+Author : Hari Prasad C
+Description : Write a program, Create a FIFO  using system call mknod.
+Date: 17th Aug, 2023.
+============================================================================
+*/
+
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -11,9 +20,9 @@
 int main() {
 	int pipe, pid;
 
-	if ( access("nameFifo", F_OK) ) mkfifo ("nameFifo", 0744);
+	if ( access("namedFifo", F_OK) ) mkfifo ("namedFifo", 0744);
 
-	pipe = open ( "nameFifo", O_RDWR);
+	pipe = open ( "namedFifo", O_RDWR);
 
 	if (!( pid = fork() )) {
 		char message[MAX];

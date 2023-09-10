@@ -1,3 +1,13 @@
+/*
+============================================================================
+Name : Program 5
+Author : Hari Prasad C
+Description : Write a program to create five new files with infinite loop. Execute the program in the background
+	      and check the file descriptor table at /proc/pid/fd.
+Date: 18th Aug, 2023.
+============================================================================
+*/
+
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/types.h>
